@@ -5,6 +5,12 @@ class Parser {
 
 	constructor(p) {
 		this.path = p;
+		if (!Buffer.isBuffer(this.path) && typeof this.path !== 'string') {
+			throw new Error('path needs to be a buffer or a string');
+		}
+		if (typeof this.path === 'string' && !this.path.match(/\.bdf$/)) {
+			throw new Error('the file path extension is wrong');
+		}
 	}
 
 	find(list, i, end) {
@@ -45,7 +51,8 @@ class Parser {
 	}
 
 	toObject() {
-		return fs.readFile(this.path).then((res) => {
+		let get = (Buffer.isBuffer(this.path)) ? Promise.resolve(this.path) : fs.readFile(this.path);
+		return get.then((res) => {
 			let lines = res.toString().replace(/\r/g, '').split('\n');
 			let out = this.find(lines, 0);
 			return out[0];

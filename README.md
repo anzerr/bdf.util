@@ -12,9 +12,13 @@ npm install --save git+https://git@github.com/anzerr/bdf.util.git
 
 #### `Example`
 ``` javascript
-const {parse} = require('bdf.util');
+const {parse, bitmap} = require('bdf.util');
 
-parser('./test/cherry-10-b.bdf').then((res) => {
+parse('./test/cherry-10-b.bdf').then((res) => {
+	console.log(res);
+});
+
+bitmap('./test/cherry-10-b.bdf').then((res) => {
 	console.log(res);
 });
 ```

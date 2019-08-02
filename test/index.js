@@ -42,7 +42,7 @@ bitmap('./test/cherry-10-b.bdf').then((char) => {
 
 	return map;
 }).then((map) => {
-	fs.writeFile('./test/example.bmp', bmp.encode({
+	return fs.writeFile('./test/example.bmp', bmp.encode({
 		width: map.width,
 		height: map.height,
 		endian: true,
