@@ -50,13 +50,17 @@ class Parser {
 		return [o, i];
 	}
 
+	fromBuffer(buff) {
+		let lines = buff.toString().replace(/\r/g, '').split('\n');
+		let out = this.find(lines, 0);
+		return out[0];
+	}
+
 	toObject() {
-		let get = (Buffer.isBuffer(this.path)) ? Promise.resolve(this.path) : fs.readFile(this.path);
-		return get.then((res) => {
-			let lines = res.toString().replace(/\r/g, '').split('\n');
-			let out = this.find(lines, 0);
-			return out[0];
-		});
+		if (Buffer.isBuffer(this.path)) {
+			return this.fromBuffer(this.path);
+		}
+		return fs.readFile(this.path).then((res) => this.fromBuffer(res));
 	}
 
 }
