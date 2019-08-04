@@ -42,8 +42,12 @@ class Parser {
 				return [o, i];
 			}
 			if (!list[i].match(/^END[A-Z]*$/)) {
-				let prop = list[i].split(' ');
-				o[prop[0]] = prop[1].match(/^\d+$/) ? parseInt(prop[1], 10) : prop[1];
+				let prop = list[i].match(/^([A-Z_]+?)\s(.*?)$/);
+				console.log(list[i], prop);
+				o[prop[1]] = prop[2].split(' ').map((a) => {
+					return a.match(/^-?\d+$/) ? parseInt(a, 10) : a;
+				});
+				o[prop[1]] = o[prop[1]].length === 1 ? o[prop[1]][0] : o[prop[1]];
 			}
 			i++;
 		}

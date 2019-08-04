@@ -1,13 +1,14 @@
 
 const {bitmap} = require('../index.js'),
-	Map = require('image.util'),
 	bmp = require('bmp.util'),
 	fs = require('fs.promisify');
 
 // the font used in this test was taken from https://github.com/turquoise-hexagon/cherry
 
 bitmap('./test/cherry-10-b.bdf').then((char) => {
-	let count = Object.keys(char).length;
+	console.log(char);
+
+	/* let count = Object.keys(char).length;
 
 	let max = Math.ceil(Math.sqrt(count));
 	const map = new Map({
@@ -17,9 +18,9 @@ bitmap('./test/cherry-10-b.bdf').then((char) => {
 	});
 
 	let draw = (key, x, y) => {
-		for (let i in char[key]) {
-			for (let v in char[key][i]) {
-				if (char[key][i][v]) {
+		for (let i in char[key].bitmap) {
+			for (let v in char[key].bitmap[i]) {
+				if (char[key].bitmap[i][v]) {
 					map.fill(x + Number(i), y + Number(v), {r: 255, g: 255, b: 255}, 1);
 				}
 			}
@@ -40,12 +41,13 @@ bitmap('./test/cherry-10-b.bdf').then((char) => {
 		draw(text[i], map.height - 20, 10 + (i * 10));
 	}
 
-	return map;
+	return map;*/
 }).then((map) => {
-	return fs.writeFile('./test/example.bmp', bmp.encode({
+
+	/* return fs.writeFile('./test/example.bmp', bmp.encode({
 		width: map.width,
 		height: map.height,
 		endian: true,
 		data: map.toBuffer()
-	}).data);
+	}).data);*/
 }).catch(console.log);
