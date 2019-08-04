@@ -43,7 +43,6 @@ class Parser {
 			}
 			if (!list[i].match(/^END[A-Z]*$/)) {
 				let prop = list[i].match(/^([A-Z_]+?)\s(.*?)$/);
-				console.log(list[i], prop);
 				o[prop[1]] = prop[2].split(' ').map((a) => {
 					return a.match(/^-?\d+$/) ? parseInt(a, 10) : a;
 				});
