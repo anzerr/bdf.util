@@ -10,7 +10,7 @@
 	"author": "anzerr",
 	"license": "MIT",
 	"devDependencies": {
-		"eslint": "^5.11.1",
+		"eslint": "5.11.1",
 		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git",
 		"bmp.util": "git+https://git@github.com/anzerr/bmp.util.git",
 		"image.util": "git+https://git@github.com/anzerr/image.util.git"
@@ -23,14 +23,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/anzerr/bdf.util.git"
+		"url": "git@github.com:anzerr/bdf.util.git"
 	},
 	"engines": {
 		"node": ">= 0.10.0"
 	},
 	"types": "index.d.ts",
 	"bugs": {
-		"url": "https://github.com///github.com/anzerr/bdf.util/issues"
+		"url": "https://github.com/anzerr/bdf.util/issues"
 	},
-	"homepage": "https://github.com///github.com/anzerr/bdf.util#readme"
+	"homepage": "https://github.com/anzerr/bdf.util#readme"
 }
