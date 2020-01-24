@@ -1,6 +1,6 @@
 {
 	"name": "bdf.util",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Util to parse BDF font format files",
 	"keywords": [
 		"bdf",
