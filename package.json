@@ -1,17 +1,29 @@
 {
 	"name": "bdf.util",
 	"version": "1.0.6",
-	"description": "",
+	"description": "Util to parse BDF font format files",
+	"keywords": [
+		"bdf",
+		"bitmap",
+		"font",
+		"nodejs",
+		"text",
+		"util"
+	],
+	"homepage": "https://github.com/anzerr/bdf.util#readme",
+	"bugs": {
+		"url": "https://github.com/anzerr/bdf.util/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:anzerr/bdf.util.git"
+	},
+	"license": "MIT",
+	"author": "anzerr",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"scripts": {
 		"test": "node test/index.js"
-	},
-	"author": "anzerr",
-	"license": "MIT",
-	"devDependencies": {
-		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git",
-		"bmp.util": "git+https://git@github.com/anzerr/bmp.util.git",
-		"image.util": "git+https://git@github.com/anzerr/image.util.git"
 	},
 	"eslintConfig": {
 		"extends": "eslint-config-basic"
@@ -19,16 +31,12 @@
 	"dependencies": {
 		"fs.promisify": "git+https://git@github.com/anzerr/fs.promisify.git"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:anzerr/bdf.util.git"
+	"devDependencies": {
+		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git",
+		"bmp.util": "git+https://git@github.com/anzerr/bmp.util.git",
+		"image.util": "git+https://git@github.com/anzerr/image.util.git"
 	},
 	"engines": {
 		"node": ">= 0.10.0"
-	},
-	"types": "index.d.ts",
-	"bugs": {
-		"url": "https://github.com/anzerr/bdf.util/issues"
-	},
-	"homepage": "https://github.com/anzerr/bdf.util#readme"
+	}
 }
