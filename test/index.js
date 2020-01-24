@@ -6,9 +6,7 @@ const {bitmap} = require('../index.js'),
 // the font used in this test was taken from https://github.com/turquoise-hexagon/cherry
 
 bitmap('./test/cherry-10-b.bdf').then((char) => {
-	console.log(char);
-
-	/* let count = Object.keys(char).length;
+	/*let count = Object.keys(char).length;
 
 	let max = Math.ceil(Math.sqrt(count));
 	const map = new Map({
