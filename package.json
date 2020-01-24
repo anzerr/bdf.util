@@ -33,8 +33,7 @@
 	},
 	"devDependencies": {
 		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git",
-		"bmp.util": "git+https://git@github.com/anzerr/bmp.util.git",
-		"image.util": "git+https://git@github.com/anzerr/image.util.git"
+		"bmp.util": "git+https://git@github.com/anzerr/bmp.util.git"
 	},
 	"engines": {
 		"node": ">= 0.10.0"
